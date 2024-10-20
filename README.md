@@ -3,12 +3,16 @@ Generate your Discord bot's base with all your desired functions at the ready
 
 # Features
 - Easily make a base for your Discord bot with CLI or config file
+- Base commands are included by default
+    - If you want a bot from scratch, pass `scratch` on `base_user_functions`\
+      and `none` on `base_bg_functions` and `external_packages`
 - Multiple choices for pre-written user-side interactions:
     - [ ] Bot maintenance comfort functions\
           (redeploy if C++, restart if TS/JS or Python, debug, etc.)
     - [ ] Server management (roles, channels, etc.)
     - [ ] Member management (ban, kick, timeout, etc.)
     - [ ] Fun & games (economy and related)
+    - [ ] Alternate reality game ([Enigma](https://github.com/IOServerSoftware/halloween-enigma)-like puzzle capabilities)
 - Multiple choices for pre-written background interactions:
     - [ ] SQL database management via SQLite
     - [ ] Engagement logging (message, voice chat, etc.)
@@ -53,4 +57,27 @@ Then, in your terminal, `cd` to the directory where `dbf.cfg` is located, and ex
 ```
 dbf --build-from-config
 ```
-It will now generate a base based on your configuration file.
+It will now generate a base according to your configuration file.
+
+*If you are, however, working on a Node.js/TypeScript project, there are some more variables involved.*
+
+Your JS/TS config file would look like this:
+```
+language: (js/ts)
+name: mybot
+version: 1.0.0
+description: A Discord bot
+base_user_functions:
+    maintenance
+    server_management
+    member_management
+    fun_and_games
+    message_handling
+base_bg_functions:
+    sql_database_management
+    engagement_logging
+    watchdog
+external_packages:
+    sqlite3
+    csv_parser
+```
