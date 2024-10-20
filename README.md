@@ -14,6 +14,8 @@ Generate your Discord bot's base with all your desired functions at the ready
     - [ ] Fun & games (economy and related)
     - [ ] Alternate reality game ([Enigma](https://github.com/IOServerSoftware/halloween-enigma)-like puzzle capabilities)
 - Multiple choices for pre-written background interactions:
+    - [ ] File management
+    - [ ] Update via Git pull (connected to bot maintenance)
     - [ ] SQL database management via SQLite
     - [ ] Engagement logging (message, voice chat, etc.)
     - [ ] Watchdog (in case of any suspicious users)
@@ -22,6 +24,7 @@ Generate your Discord bot's base with all your desired functions at the ready
     - [ ] C++ with [D++](https://dpp.dev)
     - [ ] Node.js/TypeScript with [Discord.js](https://discord.js.org)
     - [ ] Python with [Nextcord](https://nextcord.dev)
+    - [ ] Others coming soon!
 
 # How to use
 There are two ways you can use DBF.
@@ -31,7 +34,7 @@ You can make your base directly from the command-line application by executing i
 ```
 dbf
 ```
-This brings up a setup prompt asking you for certain things that relate to your bot, including but not limited to `language`, `name`, `base_user_functions`, `base_bg_functions`, `entry_point`, `external_packages`, among others.\
+This brings up a setup prompt asking you for certain things related to your bot.
 Fill those in, and it should generate a new folder for your bot with files in your desired configuration and in your desired programming language.
 
 ### Config file
@@ -39,6 +42,8 @@ Alternatively, you can tell `dbf` what you want done on a `dbf.cfg` file formatt
 ```
 language: cpp
 name: mybot
+licence: mit
+init_readme: true
 base_user_functions:
     maintenance
     server_management
@@ -65,6 +70,8 @@ Your JS/TS config file would look like this:
 ```
 language: (js/ts)
 name: mybot
+licence: mit
+init_readme: true
 version: 1.0.0
 description: A Discord bot
 base_user_functions:
@@ -79,5 +86,4 @@ base_bg_functions:
     watchdog
 external_packages:
     sqlite3
-    csv_parser
 ```
