@@ -8,4 +8,6 @@
 #include <sstream>
 #include <vector>
 
+namespace fs = std::filesystem;
+
 #endif
