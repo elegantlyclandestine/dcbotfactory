@@ -31,7 +31,46 @@ std::vector<std::string> cpp_main_header_slash_interactions = {
 };
 
 std::vector<std::string> cpp_gitignore = {
-
+    "# Prerequisites",
+    "*.d",
+    "",
+    "# Compiled Object files",
+    "*.slo",
+    "*.lo",
+    "*.o",
+    "*.obj",
+    "",
+    "# Precompiled Headers",
+    "*.gch",
+    "*.pch",
+    "",
+    "# Compiled Dynamic libraries",
+    "*.so",
+    "*.dylib",
+    "*.dll",
+    "",
+    "# Fortran module files",
+    "*.mod",
+    "*.smod",
+    "",
+    "# Compiled Static libraries",
+    "*.lai",
+    "*.la",
+    "*.a",
+    "*.lib",
+    "",
+    "# Executables",
+    "*.exe",
+    "*.out",
+    "*.app",
+    "",
+    "# Others",
+    ".vscode/",
+    ".DS_Store",
+    "build*",
+    "src/cfg/config.cpp",
+    "src/cfg/cfg.cpp",
+    "lib/"
 };
 
 std::vector<std::string> cpp_main_source_slash_interactions = {
