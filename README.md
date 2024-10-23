@@ -44,6 +44,7 @@ language: cpp
 name: mybot
 licence: mit
 init_readme: true
+intents: default/(intents)/all
 base_user_functions:
     maintenance
     server_management
@@ -72,6 +73,7 @@ language: (js/ts)
 name: mybot
 licence: mit
 init_readme: true
+intents: default/(intents)/all
 version: 1.0.0
 description: A Discord bot
 base_user_functions:
