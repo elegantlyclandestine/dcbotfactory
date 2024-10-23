@@ -79,6 +79,22 @@ std::vector<std::string> cpp_entry_point_slash_cmds = {
     "#include \"../include/{bot}.h\"",
     "",
     "int main() {",
+    "    dpp::cluster bot(bot_token, {intents});",
+    "    bot.on_log(dpp::utility::cout_logger);",
+    "    bot.on_ready([&](const dpp::ready_t& event) {",
+    "        std::cout << \"Logged in as \" << bot.get_user(event.user.id).username << \"!\" << std::endl;",
+    "    });",
+    "    bot.on_slashcommand([&](const dpp::slashcommand_t& event) {",
+    "        if (event.command.get_command_name() == \"ping\") {",
+    "            event.reply(\"Pong!\");",
+    "            return;",
+    "        }",
+    "    });",
+    "    dpp::slashcommand ping_cmd(\"ping\", \"Responds with \"Pong!\" (Use this, it's the one that works.)\", bot.me.id);"
+    "    bot.global_command_create(dpp::slashcommand(ping_cmd));"
+    "    bot.start();",
+    "    return 0;",
+    "}"
 
 };
 
