@@ -2,7 +2,7 @@
 #ifndef dbf_cpp_base_hpp
 #define dbf_cpp_base_hpp
 
-#include <dbf.hpp>
+#include "../dbf.hpp"
 
 std::vector<fs::path> cpp_base_filepaths = {
     "include/{bot}.h",
