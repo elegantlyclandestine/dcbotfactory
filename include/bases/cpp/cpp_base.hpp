@@ -76,7 +76,7 @@ std::vector<std::string> cpp_gitignore = {
 std::vector<std::string> cpp_entry_point_slash_cmds = {
     "#include <dpp/dpp.h>",
     "#include <iostream>",
-    "#include \"{bot}.h\"",
+    "#include \"../include/{bot}.h\"",
     "",
     "int main() {",
 
