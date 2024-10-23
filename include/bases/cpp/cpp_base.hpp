@@ -14,8 +14,14 @@ std::vector<fs::path> cpp_base_filepaths = {
 
 std::vector<std::string> cpp_main_header_slash_interactions = {
     "#pragma once",
-    "#ifndef {bot}_h"
-    "#define {bot}_h"
+    "#ifndef {bot}_h",
+    "#define {bot}_h",
+    "",
+    "#include <dpp/dpp.h>",
+    "#include <string>",
+    "#include <iostream>",
+    "",
+    "#endif"
 };
 
 std::vector<std::string> cpp_gitignore = {
