@@ -12,6 +12,12 @@ std::vector<fs::path> cpp_base_filepaths = {
     "README.md"
 };
 
+std::vector<fs::path> cpp_base_directories = {
+    "include",
+    "lib",
+    "src"
+};
+
 std::vector<std::string> cpp_main_header_slash_interactions = {
     "#pragma once",
     "#ifndef {bot}_h",
