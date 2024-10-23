@@ -73,7 +73,7 @@ std::vector<std::string> cpp_gitignore = {
     "lib/"
 };
 
-std::vector<std::string> cpp_main_source_slash_interactions = {
+std::vector<std::string> cpp_entry_point_slash_cmds = {
     "#include <dpp/dpp.h>",
     "#include <iostream>",
     "#include \"{bot}.h\"",
